@@ -1,0 +1,46 @@
+version: '2'
+services:
+  memcached:
+    image: memcached
+    container_name: memcached
+    expose:
+        - "11277"
+    networks:
+        - backend
+  php:
+    build: ./php
+    container_name: phpfpm
+    depends_on:
+        - memcached
+    links:
+        - memcached
+    expose:
+        - "9000"
+    networks:
+        - frontend
+        - backend
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    depends_on:
+        - php
+    links:
+        - php:phpfpm
+    ports:
+        - "80:80"
+    networks:
+        - frontend
+  ubuntu-nginx:
+    build: ./ubuntu
+    container_name: ubuntu-nginx
+    depends_on:
+        - php
+    links:
+        - php:phpfpm
+    ports:
+        - "8080:80"
+    networks:
+        - frontend
+networks:
+    backend:
+    frontend:
