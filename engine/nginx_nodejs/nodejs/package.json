@@ -1,0 +1,13 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2-docker start index.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "pm2": "^2.0.19"
+  }
+}
