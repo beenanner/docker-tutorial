@@ -1,0 +1,24 @@
+version: '2'
+services:
+  golang:
+    build: ./golang
+    container_name: golang
+    expose:
+        - "8080"
+    ports:
+        - "8080:8080"
+    networks:
+        - frontend
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    depends_on:
+        - golang
+    links:
+        - golang
+    ports:
+        - "80:80"
+    networks:
+        - frontend
+networks:
+    frontend:
