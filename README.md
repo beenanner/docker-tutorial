@@ -2,19 +2,19 @@
 
 ### Lesson 1 - Docker Engine
 
-[Nginx + PHP + Memcached](engine/nginx_php/README.md)
+[Nginx + PHP + Memcached](engine/nginx_php/)
 
-[Nginx + NodeJS](engine/nginx_nodejs/README.md)
+[Nginx + NodeJS](engine/nginx_nodejs/)
 
-[Nginx + Golang](engine/nginx_golang/README.md)
+[Nginx + Golang](engine/nginx_golang/)
 
 ### Lesson 2 - Docker Compose
 
-[Nginx + PHP + Memcached](compose/nginx_php/README.md)
+[Nginx + PHP + Memcached](compose/nginx_php/)
 
-[Nginx + NodeJS](compose/nginx_nodejs/README.md)
+[Nginx + NodeJS](compose/nginx_nodejs/)
 
-[Nginx + Golang](compose/nginx_golang/README.md)
+[Nginx + Golang](compose/nginx_golang/)
 
 ### Lesson 3 - Docker Volumes
 
