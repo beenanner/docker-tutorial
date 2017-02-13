@@ -18,7 +18,7 @@
 
 ### Lesson 3 - Docker Volumes
 
-
+[Volumes walkthrough](volumes/)
 
 ### Lesson 4 - Docker Networks
 
